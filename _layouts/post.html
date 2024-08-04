@@ -6,6 +6,9 @@
       {% include header.html %}
       <section class="article">
         <div class="article-header">
+          {% if page.thumbnail %}
+          <img src="{{ page.thumbnail }}" alt="Thumbnail for {{ page.title }}" class="article-thumbnail">
+          {% endif %}
           <h2 class="article-title">{{page.title}}</h2>
           <small class="date">{{page.date | date_to_string}}</small>
           <div class="categories">
