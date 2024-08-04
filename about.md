@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 layout: post
-permalink: /about/
+permalink: "/about/"
 ---
 <div align="center" class="align-container">
   <img src="{{site.baseurl}}/profile.gif" width="400" alt="Profile Image">
