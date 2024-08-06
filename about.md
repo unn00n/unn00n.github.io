@@ -8,29 +8,18 @@ permalink: "/about/"
 </div>
 
 <div align="center">
-  <h1 id="animated-text">My name is <span id="dynamic-part">QWxpIEVscmh5YXNoaQ==</span></h1>
+  <h1 id="animated-text">My Name is Ali Elrhyashi</h1>
 </div>
 
 <script>
   window.onload = function() {
-    const dynamicPart = document.getElementById("dynamic-part");
-    
-    // Initial delay before fade-out
-    setTimeout(() => {
-      dynamicPart.style.opacity = "0";
-    }, 2000); // 2-second delay
-
-    // Change text and fade-in with new text
-    setTimeout(() => {
-      dynamicPart.innerHTML = "Ali Elrhyashi";
-      dynamicPart.style.opacity = "1";
-    }, 4000); // Total 4 seconds delay (2s fade-out + 2s wait)
+    document.getElementById("animated-text").style.opacity = "1";
   };
 </script>
 
 <style>
-#dynamic-part {
-  opacity: 1;
+#animated-text {
+  opacity: 0;
   transition: opacity 2s ease-in-out;
 }
 </style>
