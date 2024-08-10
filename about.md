@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "$whoami"
 layout: post
 permalink: "/about/"
 ---
@@ -8,7 +8,7 @@ permalink: "/about/"
 </div>
 
 <div align="center">
-  <h1 id="animated-text">My Name is Ali Elrhyashi</h1>
+  <h1 id="animated-text">$Ali Elrhyashi</h1>
 </div>
 
 <script>
@@ -28,7 +28,7 @@ permalink: "/about/"
 Passionate about SOC/DFIR and Cybersecurity, I am committed to understanding the intricacies of the digital world and defending it against threats. I thrive on learning new technologies and applying them to real-world challenges. I actively participate in Capture The Flag (CTF) competitions, constantly honing my skills.
 </p>
 <div align="center">
-  <h1>My Skills</h1>
+  <h1>$My Skills</h1>
 </div> 
 <div align="center" class="flex-container">
   <div class="flex-item">
@@ -54,7 +54,7 @@ Passionate about SOC/DFIR and Cybersecurity, I am committed to understanding the
 </div>
 
 <div align="center">
-  <h1>My Info</h1>
+  <h1>$My Info</h1>
 </div>
 <div align="center" class="flex-container">
   <div class="flex-item">
@@ -80,7 +80,7 @@ Passionate about SOC/DFIR and Cybersecurity, I am committed to understanding the
 }
 </style>
 
-<h1 align="center"> My Kits 
+<h1 align="center"> $My Kits 
 <br>
 <!--img class="no-interaction" src="https://img.shields.io/badge/-C++-00599C?logo=cplusplus&logoColor=white" alt="C++" /-->
 <!--img class="no-interaction" src="https://img.shields.io/badge/-C-A8B9CC?logo=c&logoColor=white" alt="C" /-->
