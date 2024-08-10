@@ -6,7 +6,7 @@ description: "
   </p>
   <br/>
   <p>
-    <a href='/about/' target='_blank'>About Me</a>
+    <a href='/about/' target='_blank'>$whoami</a>
   </P>
 "
 email: aly.elrhyashi@gmail.com
