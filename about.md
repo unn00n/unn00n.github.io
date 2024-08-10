@@ -61,7 +61,7 @@ Passionate about SOC/DFIR and Cybersecurity, I am committed to understanding the
     <h5><a href="https://linksta.cc/@unn00n" target="_blank">Linkstack</a></h5>
   </div>
   <div class="flex-item">
-    <h5><a href="https://docs.google.com/document/d/1q7JLOtGfTEeJxaRAAR90kGMpxenAK0M_/edit" target="_blank">My Resume</a></h5>
+    <h5><a href="https://docs.google.com/document/d/1BKcttBPw1jtO8OdenXNsAC6UM-jmZNFs/edit" target="_blank">My Resume</a></h5>
   </div>
 </div> 
 
