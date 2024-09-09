@@ -2,7 +2,7 @@
 layout: post
 title: Forensics Tips & Tools
 date: 2024-08-01 
-thumbnail: /assets/images/post1.png
+thumbnail: /assets/images/2024-08-01-forensics-tips/post1.png
 categories: [CTF]
 ---
 
