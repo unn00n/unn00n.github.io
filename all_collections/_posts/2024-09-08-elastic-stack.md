@@ -66,7 +66,7 @@ Enter the token then wait
 based on the popup run:
 ```
 cd /usr/share/kibana
-bin/kibana-verification-code
+sudo bin/kibana-verification-code
 ```
 ![Generate Verification Code](/assets/images/2024-09-08-elastic-stack/verification-code-gen.jpg)
 enter the generated verification code
@@ -76,7 +76,7 @@ When the set up completes, it displays the login page.
 to get  `elastic` user new password :
 ```
 cd /usr/share/elasticsearch
-bin/elasticsearch-reset-password -u elastic
+sudo bin/elasticsearch-reset-password -u elastic
 export ELASTIC_PASSWORD="your_auto_generated_password"
 ```
 ![Reset Password for elastic user](/assets/images/2024-09-08-elastic-stack/reset-password.jpg)
