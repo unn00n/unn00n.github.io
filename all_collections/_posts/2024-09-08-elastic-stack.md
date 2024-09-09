@@ -44,6 +44,15 @@ We have already added the Elastic package source above so we can install by just
 sudo apt install kibana
 ```
 ### Start and Run Kibana
+Start the Kibana service:
+```
+sudo systemctl start elasticsearch
+```
+Enable Kibana to start up every time the server boots:
+```
+sudo systemctl enable elasticsearch
+```
+
 Open firefox then write [localhost:5601]
 ![Elasticsearch Token Enrollment](/assets/images/2024-09-08-elastic-stack/elastic-token.png)
 The `elasticsearch-create-enrollment-token` command creates enrollment tokens for Elasticsearch nodes and Kibana instances.
