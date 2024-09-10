@@ -44,10 +44,20 @@ We have already added the Elastic package source above so we can install by just
 sudo apt install kibana
 ```
 ### Start and Run Kibana
+Start the Kibana service:
+```
+sudo systemctl start kibana
+```
+Enable Kibana to start up every time the server boots:
+```
+sudo systemctl enable kibana
+```
+
 Open firefox then write [localhost:5601]
 ![Elasticsearch Token Enrollment](/assets/images/2024-09-08-elastic-stack/elastic-token.png)
 The `elasticsearch-create-enrollment-token` command creates enrollment tokens for Elasticsearch nodes and Kibana instances.
 ```
+cd /usr/share/elasticsearch
 sudo bin/elasticsearch-create-enrollment-token --scope kibana
 ```
 ![Generate Token](/assets/images/2024-09-08-elastic-stack/generate-token.jpg)
@@ -55,7 +65,8 @@ Enter the token then wait
 ![Verification Code](/assets/images/2024-09-08-elastic-stack/verification-code.png)
 based on the popup run:
 ```
-bin/kibana-verification-code
+cd /usr/share/kibana
+sudo bin/kibana-verification-code
 ```
 ![Generate Verification Code](/assets/images/2024-09-08-elastic-stack/verification-code-gen.jpg)
 enter the generated verification code
@@ -64,7 +75,8 @@ When the set up completes, it displays the login page.
 ![Kibana Login Page](/assets/images/2024-09-08-elastic-stack/login-kibana.png)
 to get  `elastic` user new password :
 ```
-bin/elasticsearch-reset-password -u elastic
+cd /usr/share/elasticsearch
+sudo bin/elasticsearch-reset-password -u elastic
 export ELASTIC_PASSWORD="your_auto_generated_password"
 ```
 ![Reset Password for elastic user](/assets/images/2024-09-08-elastic-stack/reset-password.jpg)
