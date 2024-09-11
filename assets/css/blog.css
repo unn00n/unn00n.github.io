@@ -214,3 +214,35 @@ main {
     font-size: 1rem;
   }
 }
+/*Recent Posts*/
+.sidebar {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 40%; /* Distance from the top of the viewport */
+  width: 24%; /* Adjust based on your layout */
+  padding: 20px;
+  float: right;
+  margin-left: 10px; /* Add some margin if needed */
+}
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative; /* Make it non-sticky on small screens */
+    width: 100%; /* Full width on small screens */
+  }
+  
+  .content {
+    width: 100%; /* Content takes full width on small screens */
+  }
+}
+.sidebar ul li a {
+  color: #00cccc; /* Change to your desired color */
+  text-decoration: none; /* Removes the default underline */
+  border-bottom: 2px solid #00cccc; /* Adds the underline effect */
+}
+
+.sidebar ul li a:hover {
+  color: #00cccc; /* Keeps the same color on hover */
+  text-decoration: none;
+  border-bottom: 2px solid #00cccc; /* Keeps the underline on hover */
+}
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set-Up Elastic Stack - Elasticsearch, Kibana and  Elastic Agent
+title: "Set-Up Elastic Stack: Elasticsearch, Kibana and  Elastic Agent"
 date: 2024-09-08 
 thumbnail: /assets/images/2024-09-08-elastic-stack/thumb.png
 categories: [SOC Engineering, Setup, SIEM]
