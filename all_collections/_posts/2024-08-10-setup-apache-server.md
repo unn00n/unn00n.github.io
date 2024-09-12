@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hosting a 'Hello World' Website and Wireshark HTTP Analysis
+title: Launch an Apache Webpage and Capture HTTP Traffic in Wireshark
 date: 2024-08-10 
 thumbnail: /assets/images/2024-08-10-setup-apache-server/thumb1.png
 categories: [Apache, Server, Setup, Issues]

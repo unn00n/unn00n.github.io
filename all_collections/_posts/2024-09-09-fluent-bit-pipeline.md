@@ -152,10 +152,11 @@ The `Suppress_Type_Name On` parameter ensures that no `_type` is sent to Elastic
 Start Fluent Bit using the following command and specify the configuration file:
 `./fluent-bit -c /etc/fluent-bit/fluent-bit.conf`
 ![running_fluent-bit](/assets/images/2024-09-09-fluent-bit-pipeline/run-fluent-bit.png)
-**Note:** this used for testing configuration so it creates temporary index
-To run permanently:
-`sudo systemctl enable fluent-bit`
-`sudo systemctl start fluent-bit`
+**Note:** this used for testing configuration to run automatically:
+```bash
+sudo systemctl enable fluent-bit
+sudo systemctl start fluent-bit
+```
 ### **Check Elasticsearch for the Logs**
 
 To ensure that logs are successfully being sent to Elasticsearch, I checked for the presence of the index that Fluent Bit created (`my_fluent` in this example).
@@ -163,10 +164,13 @@ To ensure that logs are successfully being sent to Elasticsearch, I checked for 
 1. Opened **Kibana** in the browser ([http://localhost:5601]).
 2. Navigated to **Stack Management** → **Index Management**.
    ![Stack_Management](/assets/images/2024-09-09-fluent-bit-pipeline/stack-management.png)
-3. Selected the `my_fluent` index. ![Index_Management](/assets/images/2024-09-09-fluent-bit-pipeline/index-management.png)
-4. Used the **Discover index** tab to view and search the logs under the `my_fluent` index.
+3. Selected `my_fluent` index. ![Index_Management](/assets/images/2024-09-09-fluent-bit-pipeline/index-management.png)
+4. Used **Discover index** button to view and search the logs under the `my_fluent` index.
    ![my_fluent-index](/assets/images/2024-09-09-fluent-bit-pipeline/my_fluent-index.png)
-   
+5. Create a Data View and add `my_fluent` index to it.
+   ![my_fluent-index](/assets/images/2024-09-09-fluent-bit-pipeline/dataview.png)
+   ![my_fluent-index](/assets/images/2024-09-09-fluent-bit-pipeline/dataview1.png)
+   ![my_fluent-index](/assets/images/2024-09-09-fluent-bit-pipeline/dataview2.png)
 
 #### **Option 2: Using Curl Command**
 

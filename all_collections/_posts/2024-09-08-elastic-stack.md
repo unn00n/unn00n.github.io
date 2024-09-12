@@ -24,6 +24,8 @@ sudo apt install elasticsearch
 ## Configure Elasticsearch
 Elasticsearch’s configuration file is in `/etc/elasticsearch/elasticsearch.yml`
 To make Elasticsearch listens on all interfaces and bound IPs  uncomment `network.host` and replace its value with `localhost`
+
+![](/assets/images/2024-09-08-elastic-stack/1.png)
 ### Start and Run Elasticsearch
 Start the Elasticsearch service:
 ```
@@ -39,7 +41,7 @@ curl -X GET "localhost:9200"
 ```
 ![Curl HTTP Request](/assets/images/2024-09-08-elastic-stack/curl-request.png)
 # Set Up Kibana
-We have already added the Elastic package source above so we can install by just `apt`:
+We have already added the Elastic package source above so we can install using `apt`:
 ```
 sudo apt install kibana
 ```
@@ -53,7 +55,7 @@ Enable Kibana to start up every time the server boots:
 sudo systemctl enable kibana
 ```
 
-Open firefox then write [localhost:5601]
+Open browser and write [localhost:5601]
 ![Elasticsearch Token Enrollment](/assets/images/2024-09-08-elastic-stack/elastic-token.png)
 The `elasticsearch-create-enrollment-token` command creates enrollment tokens for Elasticsearch nodes and Kibana instances.
 ```
@@ -95,13 +97,13 @@ we can use the same host of elasticsearch
 ![Confirmation](/assets/images/2024-09-08-elastic-stack/wait-confirmation.png)
 ![Installed Fleet Server](/assets/images/2024-09-08-elastic-stack/installed-fleet.png)
 ### Add Agents
-I have installed another virtual machine (ubuntu server) to install elastic agent and retrieve logs from the machine 
+I installed another virtual machine running ubuntu server to install elastic agent and retrieve logs from it
 ![Add Agent](/assets/images/2024-09-08-elastic-stack/add-agent.png)
 ![Create Policy](/assets/images/2024-09-08-elastic-stack/create-policy.png)
 ![Enroll in Fleet](/assets/images/2024-09-08-elastic-stack/enroll-in-fleet.png)
 ![Install Elastic Agent](/assets/images/2024-09-08-elastic-stack/install-agent-1.png)
 ![Install Elastic Agnet](/assets/images/2024-09-08-elastic-stack/install-agent-2.png)
-On ubuntu server I followed the installation guide then the last command tweaked it to skip certificate signed by unknown authority error by adding `--insecure`:
+Following the installation guide on ubuntu server till the last command tweaked it to skip "certificate signed by unknown authority" error by adding `--insecure`:
 ```
 sudo ./elastic-agent install --url=https://10.0.2.15:8220 --enrollment-token=your_generated_token --insecure
 ```
@@ -111,4 +113,4 @@ sudo ./elastic-agent install --url=https://10.0.2.15:8220 --enrollment-token=you
 ![Discover Tab Checking installed agent](/assets/images/2024-09-08-elastic-stack/discover-check-agent.png)
 By following these steps, we made it and installed Elastic Stack.
 You can check the [Set-up Fluent-Bit]({{ site.baseurl }}{% post_url 2024-09-09-fluent-bit-pipeline %})
- If you want to advance.
+post to learn how to set up Fluent-Bit and send logs to Elastic Stack.
