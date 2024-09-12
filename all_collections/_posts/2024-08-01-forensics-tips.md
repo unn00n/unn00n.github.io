@@ -39,7 +39,7 @@ Two common protocols that are transmitted in plain text are **HTTP** and **Telne
 
 # ppt is(zip)
 
-*or excel and microsoft offfice files.*
+*or excel and microsoft office files.*
 
 ## Macros
 

@@ -7,8 +7,10 @@ permalink: "/about/"
   <img src="{{site.baseurl}}/profile.gif" width="400" alt="Profile Image">
 </div>
 
-<div align="center">
-  <h1 id="animated-text">$Ali Elrhyashi</h1>
+# $About_Me
+<div>
+  Hi there 👋
+  <h3 id="animated-text">I am Ali Elrhyashi</h3>
 </div>
 
 <script>
@@ -26,36 +28,45 @@ permalink: "/about/"
 <p>
 Passionate about SOC/DFIR and Cybersecurity, I am committed to understanding the intricacies of the digital world and defending it against threats. I thrive on learning new technologies and applying them to real-world challenges. I actively participate in Capture The Flag (CTF) competitions, constantly honing my skills.
 </p>
-<div align="center">
-  <h1>$My Skills</h1>
-</div> 
-<div align="center" class="flex-container">
-  <div class="flex-item">
-    <h5>Soft Skills</h5>
-    <ul>
-      Adaptability<br>
-      Attention to Detail<br>
-      Teamwork<br>
-      Problem-Solving <br>
-      Creativity<br>
-      Helping others
-    </ul>
-  </div>
-  <div class="flex-item">
-    <h5>Technical Skills</h5>
-    <ul>
-      Security Operations Center <br>
-      Digital Forensics <br>
-      Incident Response <br>
-      SOC Engineering <br>
-      CTF Competitions<br>
-      Troubleshooting
-    </ul>
-  </div>
+<div>
+  <h1>$My_Skills</h1>
 </div>
 
-<div align="center">
-  <h1>$My Info</h1>
+  
+Here are the key skills I have developed throughout my studies and projects:
+   
+  - **Troubleshooting:** Skilled at diagnosing and resolving software issues, ensuring systems run efficiently by identifying the root cause of problems in network setups, applications, and configurations.
+  
+  - **Threat Detection & Response:** Experience in detecting brute force attacks, AS-REP Roasting, SQL injections, and phishing attempts using SIEM tools.
+  
+  - **SOC Operations:** Proficient in monitoring and analyzing security events in a SOC environment.
+   
+  - **SOC Engineering:** Expertise in building and maintaining SOC infrastructure, including SIEM and IDS/IPS setups.
+    
+  - **Digital Forensics:** Skilled in investigating cyber incidents by analyzing logs and system data.
+  
+  - **Incident Response:** Handling and documenting incidents following NIST standards for incident management.
+  
+  - **CTF Competitions:** Active participant in Capture the Flag (CTF) competitions.
+  
+  - **Network Security**: Knowledge of TCP/IP, firewalls, IDS/IPS, and network traffic analysis.
+   
+
+
+  <h5>Soft_Skills:</h5>
+  - **Adaptability:** Quick to adjust to new tools and challenges.
+
+  - **Attention to Detail:** Precise and thorough in all tasks, especially technical ones.
+
+  - **Teamwork:** Collaborates effectively to achieve shared goals.
+
+  - **Helping others:** Enjoys assisting and mentoring team members.
+
+  - **Problem-Solving:** Strong analytical thinker, resolving issues efficiently.
+
+  - **Creativity:** Innovates to find solutions in cybersecurity and technical tasks.Creativity
+<div>
+  <h1>$My_Info</h1>
 </div>
 <div align="center" class="flex-container">
   <div class="flex-item">
@@ -81,7 +92,7 @@ Passionate about SOC/DFIR and Cybersecurity, I am committed to understanding the
 }
 </style>
 
-<h1 align="center"> $My Kits 
+<h1> $My_Kits 
 <br>
 <!--img class="no-interaction" src="https://img.shields.io/badge/-C++-00599C?logo=cplusplus&logoColor=white" alt="C++" /-->
 <!--img class="no-interaction" src="https://img.shields.io/badge/-C-A8B9CC?logo=c&logoColor=white" alt="C" /-->
@@ -95,8 +106,9 @@ Passionate about SOC/DFIR and Cybersecurity, I am committed to understanding the
 <img class="no-interaction" src="https://img.shields.io/badge/-Virtualbox-183A61?logo=virtualbox&logoColor=white" alt="VBox" />
 
 <br>
-<img class="no-interaction" src="https://img.shields.io/badge/-Splunk-1A1A1A?logo=splunk&logoColor=white" alt="Splunk" />
 <img class="no-interaction" src="https://img.shields.io/badge/-Wireshark-1679A7?logo=wireshark&logoColor=white" alt="Wireshark" />
+<img class="no-interaction" src="https://img.shields.io/badge/IBM-QRadar-3776AB?logo=&logoColor=white" alt="QRadar" />
+<img class="no-interaction" src="https://img.shields.io/badge/-Splunk-1A1A1A?logo=splunk&logoColor=white" alt="Splunk" />
 <img class="no-interaction" src="https://img.shields.io/badge/-ELK%20Stack-005571?logo=elasticstack&logoColor=white" alt="ELK Stack" />
 <img class="no-interaction" src="https://img.shields.io/badge/-Autopsy-1B1B1B?logo=autopsy&logoColor=white" alt="Autopsy" />
 <img class="no-interaction" src="https://img.shields.io/badge/-Volatility-2C2F33?logo=volatility&logoColor=white" alt="Volatility" />
@@ -136,3 +148,10 @@ Passionate about SOC/DFIR and Cybersecurity, I am committed to understanding the
 (7-10) Surah Ash-Shams
 </blockquote>
 
+## $My_Contact
+
+Feel free to reach out to me if you'd like to discuss cybersecurity, potential collaborations, or job opportunities!
+
+- **Email**: aly.elrhyashi@gmail.com
+- **LinkedIn**: [My LinkedIn Profile](https://linkedin.com/in/ali-elrhyashi)
+- **GitHub**: [My GitHub Profile](https://github.com/unn00n)

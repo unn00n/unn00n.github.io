@@ -97,9 +97,19 @@ we can use the same host of elasticsearch
 ![Confirmation](/assets/images/2024-09-08-elastic-stack/wait-confirmation.png)
 ![Installed Fleet Server](/assets/images/2024-09-08-elastic-stack/installed-fleet.png)
 ### Add Agents
-I installed another virtual machine running ubuntu server to install elastic agent and retrieve logs from it
+I installed another virtual machine running ubuntu server to install elastic agent and retrieve logs from it.
+
+On Virtual Box I created a `Nat Network` by "`Ctrl` + `H`" to view network settings
+![Add Agent](/assets/images/2024-09-08-elastic-stack/2.png)
+![Add Agent](/assets/images/2024-09-08-elastic-stack/3.png)
+![Add Agent](/assets/images/2024-09-08-elastic-stack/4.png)
+![Add Agent](/assets/images/2024-09-08-elastic-stack/5.png)
+![Add Agent](/assets/images/2024-09-08-elastic-stack/6.png)
+From fleet page click "Add agent"
 ![Add Agent](/assets/images/2024-09-08-elastic-stack/add-agent.png)
+Create a Policy
 ![Create Policy](/assets/images/2024-09-08-elastic-stack/create-policy.png)
+Enroll in Fleet
 ![Enroll in Fleet](/assets/images/2024-09-08-elastic-stack/enroll-in-fleet.png)
 ![Install Elastic Agent](/assets/images/2024-09-08-elastic-stack/install-agent-1.png)
 ![Install Elastic Agnet](/assets/images/2024-09-08-elastic-stack/install-agent-2.png)
@@ -107,9 +117,13 @@ Following the installation guide on ubuntu server till the last command tweaked 
 ```
 sudo ./elastic-agent install --url=https://10.0.2.15:8220 --enrollment-token=your_generated_token --insecure
 ```
+Wait Confirmation
 ![Wait Confirmation](/assets/images/2024-09-08-elastic-stack/agent-wait-confirmation.png)
+Successfully Agent Added
 ![Done Confirmation](/assets/images/2024-09-08-elastic-stack/agent-done-confirmation.png)
+Check installed Agents
 ![Installed Agents](/assets/images/2024-09-08-elastic-stack/fleet-page-agents.png)
+Check Discover Tab and view logs
 ![Discover Tab Checking installed agent](/assets/images/2024-09-08-elastic-stack/discover-check-agent.png)
 By following these steps, we made it and installed Elastic Stack.
 You can check the [Set-up Fluent-Bit]({{ site.baseurl }}{% post_url 2024-09-09-fluent-bit-pipeline %})
