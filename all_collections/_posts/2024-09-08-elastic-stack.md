@@ -99,12 +99,17 @@ we can use the same host of elasticsearch
 ### Add Agents
 I installed another virtual machine running ubuntu server to install elastic agent and retrieve logs from it.
 
+---
 On Virtual Box I created a `Nat Network` by "`Ctrl` + `H`" to view network settings
 ![Add Agent](/assets/images/2024-09-08-elastic-stack/2.png)
+set both machines in the same Nat network by selecting each one and open Settings -> Network -> set Attached to Nat Network -> set Name to the created Nat network.
+
 ![Add Agent](/assets/images/2024-09-08-elastic-stack/3.png)
 ![Add Agent](/assets/images/2024-09-08-elastic-stack/4.png)
 ![Add Agent](/assets/images/2024-09-08-elastic-stack/5.png)
 ![Add Agent](/assets/images/2024-09-08-elastic-stack/6.png)
+
+---
 From fleet page click "Add agent"
 ![Add Agent](/assets/images/2024-09-08-elastic-stack/add-agent.png)
 Create a Policy

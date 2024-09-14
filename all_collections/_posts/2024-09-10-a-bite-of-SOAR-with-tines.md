@@ -12,9 +12,10 @@ that offers a user-friendly interface and a wide range of integrations with vari
 In this post, we'll explore how to get started with Tines and set up a basic workflow
 
 # Practical Exapmle with IBM Qradar
-1- Retrieve all destination ips<br>
-2- Check them with virustotal<br>
-3- Send email (report) by the malicious ones<br>
+1. Retrieve all destination ips<br>
+2. Check them with virustotal<br>
+3. Send email (report) by the malicious ones<br>
+
 I've created a diagram of the required workflow:
 ![Workflow Diagram](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/workflow-diagram.png)
 # 1.0 Submit Search
@@ -58,19 +59,31 @@ now we want to get the results:
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/get-aql.png)<br>
 configure URL by setting the cursor after `searches/` till `+` button appear then click it and add value<br>
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/plus-value.png)
-![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/value-search.png)<br>
-![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/body-search.png)<br>
-![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/body-select.png)<br>
-![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/searchid-select.png)<br>
-![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/get-search-id.png)<br>
+
+---
 **Note**
 *   Make sure runinng `Submit Ariel Query in QRadar` one time at least then connect the two elements.<br>
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/run-once.png)<br>
+
+---
+Once connected, Tines will suggest entries for you, choose and type [Enter] to continue<br>
+![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/value-search.png)<br>
+Tines suggests what data we can retrieve from it, choose `Body`
+![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/body-search.png)<br>
+we can choose `search_id` to get search results
+![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/body-select.png)<br>
+![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/searchid-select.png)<br>
+![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/get-search-id.png)<br>
+
+---
+**Note**
 *   You can put `search_id` you got from `Submit Ariel Query in QRadar`.
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/test-submit-aql-searchid.png)
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/id-call.png)
 *   For automating we created a formula to call `search_id` field from the `Submit Ariel Query in QRadar` element.
 Do not forget to fill `Basic auth` with your credentials
+
+---
 ## 2.2 Testing 
 Now we can test:
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/test-get-aql.png)<br>
@@ -99,8 +112,11 @@ Create an account on [VirusTotal](https://www.virustotal.com/gui/join-us) and ge
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/copy-api.png)<br>
 ## 4.1 Configuring "*VirusTotal - Search for IP Address*"
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/virus-total-conf.png)<br>
-![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/ip-add-virus.png)<br>
 you will have connect button just click it and follow the easy setup
+
+set **IP Address** to 
+![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/ip-add-virus.png)<br>
+Connect and run
 
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/4-connect.png)<br>
 check Events
@@ -120,13 +136,13 @@ Now we have a condition to trigger an action, we can use `send email` to send an
 ## 6.1 Configuring "*send email*"
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/email-conf.png)<br>
 I added time to subject by `DATE("now")` formula and malicious IP by `search_for_ip_address.body.data.id`
-# 7.0 Run
+# 7.0 Final Run
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/full.png)<br>
 ## 7.1 Checking emails
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/check-email.png)<br>
 ![Tines Templates](/assets/images/2024-09-06-a-bite-of-SOAR-with-tines/email-content.png)<br>
 # Conclusion
-In this blog post, we have demonstrated how to integrate QRadar with VirusTotal using Tines. We have created a workflow that submits an Ariel query to QRadar, retrieves the results, extracts the Destination IPs, and then uses VirusTotal to check if the IP is malicious. If it is, we trigger an action to send an email to the security team.
+In this post, we have demonstrated how to integrate QRadar with VirusTotal using Tines. We have created a workflow that submits an Ariel query to QRadar, retrieves the results, extracts the Destination IPs, and then uses VirusTotal to check if the IP is malicious. If it is, we trigger an action to send an email to the security team.
 
 This is a basic example and can be extended to include more features, such as checking multiple IPs or
 including additional information in the email.

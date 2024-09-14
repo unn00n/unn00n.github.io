@@ -10,7 +10,7 @@ permalink: "/about/"
 # $About_Me
 <div>
   Hi there 👋
-  <h3 id="animated-text">I am Ali Elrhyashi</h3>
+  <h3 id="animated-text">I am Ali ElRhyashi</h3>
 </div>
 
 <script>
