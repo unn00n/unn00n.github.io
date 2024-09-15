@@ -65,6 +65,17 @@ Here are the key skills I have developed throughout my studies and projects:
   - **Problem-Solving:** Strong analytical thinker, resolving issues efficiently.
 
   - **Creativity:** Innovates to find solutions in cybersecurity and technical tasks.Creativity
+
+## $My_Projects
+Here are some of my notable projects and achievements:
+- **[Integrating Tines as SOAR with QRadar](https://unn00n.github.io/posts/a-bite-of-SOAR-with-tines/)**
+  - Successfully integrated Tines as a SOAR tool with QRadar, enhancing incident response capabilities.
+- **[Build a SIEM System](https://unn00n.github.io/posts/elastic-stack/)**
+  - Designed and implemented a SIEM system using Elastic Stack, improving threat detection and incident response.
+- **[Threat Management Report](https://drive.google.com/file/d/1_XGPi4o4FlsU7E77WqBQ6Z2VNyfc2PS4/view?usp=sharing)**
+  - Conducted a comprehensive threat management report, identifying vulnerabilities and providing recommendations for improvement.
+- **[OctoDig: Open-Source Subdomain Digger](https://github.com/unn00n/OctoDig)**
+  - Developed an open-source subdomain digger, OctoDig, to perform advanced subdomain enumeration on multiple domains with multiple tools. It allows for iterative exploration, gathering both first-level and deeper subdomains across specified levels.
 <div>
   <h1>$My_Info</h1>
 </div>

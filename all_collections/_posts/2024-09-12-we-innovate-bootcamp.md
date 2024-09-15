@@ -27,8 +27,13 @@ This knowledge is essential for managing and securing enterprise networks, espec
 
 ---
 
-#### **Regular Expressions (Regex) and Shells**
-I delved into the use of **regex** for pattern matching, particularly in security applications. A specific focus was on **reverse shells**, which are often favored over **bind shells** due to their ability to bypass firewall restrictions, enhancing stealth during penetration testing.
+#### **Regular Expressions (Regex)**
+I delved into the use of **regex** for pattern matching, particularly in security applications. 
+Parsed Raw Logs from QRadar: Learned how to use Regex to parse raw logs efficiently from QRadar.
+
+---
+#### **Reverse shell VS Bind Shell**
+A specific focus was on **reverse shells**, which are often favored over **bind shells** due to their ability to bypass firewall restrictions, enhancing stealth during penetration testing.
 
 ---
 
@@ -42,7 +47,7 @@ The bootcamp provided insights into various network security concepts and tools,
 
 #### **Incident Response and Reporting**
 A major focus of the bootcamp was on **Incident Response**:
-
+- Incident Responder: The main role in Defensive Security, akin to a "firefighter" role.
 - I participated in two team-led **incident reports**: one focused on a **ransomware attack**, specifically **LockBit 3.0**, inspired by a real-world scenario, and another on a **stolen laptop** incident.
 - The ransomware report was particularly impactful, as it allowed us to simulate the incident response process in a structured manner, from detection to resolution.
 
@@ -57,6 +62,25 @@ Working with **SIEM systems** like **IBM QRadar** introduced me to:
 - **Data enrichment**, which adds additional context to logs, making detection and response more accurate.
 
 I became familiar with **Ariel Query Language (AQL)** for querying time-series datasets in QRadar, and explored how **Device Support Modules (DSMs)** enable integration of various security devices into SIEM systems.
+- **IBM QRadar:**
+    - **QRadar Components:**
+        - Event Processor: Responsible for processing logs and events.
+        - Flow Collector: Collects network flow data for analysis (NetFlow, sFlow).
+        - Custom Rules Engine (CRE): Manages the detection logic.
+        - Vulnerability Information Server (VIS): Creates new assets or updates existing ones based on vulnerability data.
+        - Magistrate: Responsible for creating and storing offenses in the PostgreSQL database.
+        - Anomaly Detection Engine (ADE): Searches for anomalies to trigger offenses.
+        - Host Profiler: Checks if new hosts or ports are detected.
+
+    - **QRadar Flow:**
+        - Events are collected and normalized.
+        - If license limits are exceeded, buffers are created.
+        - Logs and events are processed by the custom rules engine and stored in the Ariel Database.
+        - Detected offenses are reported and investigated through the QRadar console.
+
+    - **Flow Collector:** Captures data packets from network interfaces and creates "superflows" for processing.
+
+    - **Rule-based processing:** Data is analyzed in real-time for suspicious activities.
 
 ---
 
@@ -77,7 +101,9 @@ I learned about **Cross-Site Scripting (XSS)** vulnerabilities and explored miti
 ---
 
 #### **Network Pentesting and Phishing**
-Using tools like **CrackMapExec**, I conducted network penetration testing to identify vulnerabilities in enterprise networks. I also explored various techniques for detecting **phishing attacks**, such as analyzing POST methods and redirected URLs, which helped in identifying compromised credentials.
+Using tools like **CrackMapExec**, network penetration testing tool to identify vulnerabilities in enterprise networks. 
+
+I also explored various techniques for detecting **phishing attacks**, such as analyzing POST methods and redirected URLs, which helped in identifying compromised credentials.
 
 ---
 
