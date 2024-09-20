@@ -64,7 +64,7 @@ Here are the key skills I have developed throughout my studies and projects:
 
   - **Problem-Solving:** Strong analytical thinker, resolving issues efficiently.
 
-  - **Creativity:** Innovates to find solutions in cybersecurity and technical tasks.Creativity
+  - **Creativity:** Innovates to find solutions in cybersecurity and technical tasks.
 
 ## $My_Projects
 Here are some of my notable projects and achievements:
