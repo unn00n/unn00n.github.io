@@ -3,7 +3,7 @@ layout: post
 title: A Bite of SOAR with Tines & IBM Qradar
 date: 2024-09-10 
 thumbnail: /assets/images/2024-09-06-a-bite-of-SOAR-with-tines/thumb.png
-categories: [SOC Engineering, Setup, SIEM, SOAR, Tines, QRadar]
+categories: [SOC Engineering, Setup, SIEM, SOAR, Tines Story Development, QRadar]
 ---
 # Introduction
 SOAR (Security Orchestration, Automation, and Response) tools are designed to streamline and automate

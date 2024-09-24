@@ -3,7 +3,7 @@ layout: post
 title: Elastic Alert Integration with IRIS using Tines
 date: 2024-09-22 
 thumbnail: /assets/images/2024-09-22-elastic-alert-integration-with-tines/thumb.png
-categories: []
+categories: [Tines Story Development, SOC Engineering, Setup, SIEM, Elastic]
 ---
 Hey there!,
 

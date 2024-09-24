@@ -68,12 +68,14 @@ Here are the key skills I have developed throughout my studies and projects:
 
 ## $My_Projects
 Here are some of my notable projects and achievements:
+- **[Elastic Alert Integration with IRIS using Tines](https://unn00n.github.io/posts/elastic-alert-integration-with-tines/)**
+  - Successfully integrated Elasticsearch SIEM alerts with the IRIS V2 ticketing system, managed via Tines.
 - **[Integrating Tines as SOAR with QRadar](https://unn00n.github.io/posts/a-bite-of-SOAR-with-tines/)**
-  - Successfully integrated Tines as a SOAR tool with QRadar, enhancing incident response capabilities.
+  - Successfully integrated Tines as a SOAR tool with QRadar.
 - **[Build a SIEM System](https://unn00n.github.io/posts/elastic-stack/)**
-  - Designed and implemented a SIEM system using Elastic Stack, improving threat detection and incident response.
+  - Designed and implemented a SIEM system using Elastic Stack.
 - **[Threat Management Report](https://drive.google.com/file/d/1_XGPi4o4FlsU7E77WqBQ6Z2VNyfc2PS4/view?usp=sharing)**
-  - Conducted a comprehensive threat management report, identifying vulnerabilities and providing recommendations for improvement.
+  - Conducted a comprehensive threat management report.
 - **[OctoDig: Open-Source Subdomain Digger](https://github.com/unn00n/OctoDig)**
   - Developed an open-source subdomain digger, OctoDig, to perform advanced subdomain enumeration on multiple domains with multiple tools. It allows for iterative exploration, gathering both first-level and deeper subdomains across specified levels.
 <div>
@@ -120,6 +122,7 @@ Here are some of my notable projects and achievements:
 <img class="no-interaction" src="https://img.shields.io/badge/-Wireshark-1679A7?logo=wireshark&logoColor=white" alt="Wireshark" />
 <img class="no-interaction" src="https://img.shields.io/badge/IBM-QRadar-3776AB?logo=&logoColor=white" alt="QRadar" />
 <img class="no-interaction" src="https://img.shields.io/badge/-Splunk-1A1A1A?logo=splunk&logoColor=white" alt="Splunk" />
+<img class="no-interaction" src="https://img.shields.io/badge/Tines%20Story%20Development-886FBF?logoColor=fff" alt="Tines" />
 <img class="no-interaction" src="https://img.shields.io/badge/-ELK%20Stack-005571?logo=elasticstack&logoColor=white" alt="ELK Stack" />
 <img class="no-interaction" src="https://img.shields.io/badge/-Autopsy-1B1B1B?logo=autopsy&logoColor=white" alt="Autopsy" />
 <img class="no-interaction" src="https://img.shields.io/badge/-Volatility-2C2F33?logo=volatility&logoColor=white" alt="Volatility" />
