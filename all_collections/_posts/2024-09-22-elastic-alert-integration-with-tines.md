@@ -9,16 +9,16 @@ Hey there!,
 
 In this post, we will explore how to integrate Elastic Alert with IRIS using Tines.
 First let's introduce IRIS V2:
-### What is IRIS V2?
+##### What is IRIS V2?
 IRIS V2 is an open-source incident response platform designed to help cybersecurity teams collaborate and manage investigations effectively. It allows users to process alerts, manage cases, track evidence, and automate tasks. IRIS supports integration with various tools (like VirusTotal and MISP), has an API for automation, and is easy to deploy via Docker. The platform, created by the Airbus Cybersecurity CSIRT team, is highly customizable and aims to streamline incident response operations for organizations.
 
 To successfully implement the integration of **Elastic Alert Tracking** with **IRIS V2** using **Tines**, we can break down the process into a set of structured steps, as follows:
-### Prerequisites
+##### Prerequisites
 - **Elasticsearch instance**: Ensure Elasticsearch is running in your environment.
 - **IRIS V2 ticketing system**: IRIS V2 must be hosted and accessible for the ticketing integration.
 - **Tines SOAR platform**: Tines must be accessible from your environment.
 - **ngrok**: You can use ngrok platform to expose Elasticsearch and IRIS V2 to Internet.
-#### High-Level Overview
+###### High-Level Overview
 1. **Deploy IRIS V2**.
 2. **Connect Elasticsearch with Tines via the Elasticsearch API**.
 3. **Configure Tines to automate the alert retrieval from Elasticsearch and integrate ticket creation into IRIS V2**.
@@ -32,15 +32,15 @@ To successfully implement the integration of **Elastic Alert Tracking** with **I
    - **Pre-requisites:** You will need a system configured with Docker and Docker Compose (IRIS runs as Docker containers).
     - Install Docker: 
     ```bash
-### Install necessary prerequisites:
+##### Install necessary prerequisites:
 sudo apt install apt-transport-https ca-certificates curl software properties-common
-### Add Docker’s official GPG key:
+##### Add Docker’s official GPG key:
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-### Set up the stable Docker repository:
+##### Set up the stable Docker repository:
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-### Update your package list to include Docker’s repository:
+##### Update your package list to include Docker’s repository:
 sudo apt update
-### Install Docker:
+##### Install Docker:
 sudo apt install docker-ce docker-ce-cli containerd.io
 ```
 
@@ -73,7 +73,7 @@ Check logs to get administrator's password:
  ![img5](/assets/images/2024-09-22-elastic-alert-integration-with-tines/10.png)
  ![img5](/assets/images/2024-09-22-elastic-alert-integration-with-tines/11.png)
 
-### Use **ngrok** to expose the local IRIS V2 and Elasticsearch service to the internet:
+##### Use **ngrok** to expose the local IRIS V2 and Elasticsearch service to the internet:
 **Ngrok** is a tool that provides secure tunnels to expose a local server or service to the internet. It enables us to share our local environment with external users without deploying to a cloud server.
 
 **Install ngrok via Apt:**
@@ -99,10 +99,10 @@ Check IRIS:
 
 ---
 
-### Step 2: Elasticsearch Integration Using Tines
+##### Step 2: Elasticsearch Integration Using Tines
 1. **Tines Overview:**
    - Tines is a Security Orchestration, Automation, and Response (SOAR) platform that can automate workflows by interacting with different APIs.
-#### **Add Alerts to Elasticsearch**
+###### **Add Alerts to Elasticsearch**
     - Index a set of simulated alerts into Elasticsearch.
     - Use the **Bulk API** to upload alerts in JSON format for later retrieval via Tines.
     - Example JSON structure:
@@ -185,7 +185,7 @@ Ensure the API is reachable and correctly configured for access via Tines.
 ```
 ![img5](/assets/images/2024-09-22-elastic-alert-integration-with-tines/22.png)
 
-### Explanation of the Example:
+##### Explanation of the Example:
 1. **Size of Hits**:  
     The `"size": 0` is set to prevent Elasticsearch from returning the default search results. Since we are interested in unique alerts, we only want the aggregated results.
     
@@ -226,7 +226,7 @@ Each item (or "hit") from the exploded array will be stored or processed under t
 
 ---
 
-### Step 3: Alert Ticketing in IRIS V2
+##### Step 3: Alert Ticketing in IRIS V2
 1. **IRIS V2 Ticket Creation via API:**
    - IRIS provides a REST API for ticket creation. Use this API in conjunction with the data retrieved from Elasticsearch via Tines.
    - Example API call to create a ticket:
@@ -248,7 +248,7 @@ Each item (or "hit") from the exploded array will be stored or processed under t
 
 ---
 
-### Step 4: Testing and Evaluation
+##### Step 4: Testing and Evaluation
 1. **Run the Full Workflow:**
 ![img5](/assets/images/2024-09-22-elastic-alert-integration-with-tines/35.png)
 

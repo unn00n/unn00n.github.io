@@ -5,14 +5,14 @@ date: 2024-09-23
 thumbnail: /assets/images/2024-09-23-custom-retention-policy/thumb.png
 categories: [Tines Story Development, SOC Engineering, Setup, SIEM, Elastic]
 ---
-## Overview
+#### Overview
 In this tutorial, we will cover how to create a custom retention policy using the Elasticsearch API. This
 will be useful for SOC engineers who want to manage their data retention in a more flexible way.
-## Prerequisites
-#### **Index Selection:**
+#### Prerequisites
+##### **Index Selection:**
 Let's assume the index for this task is called `my_fluent`.
 ![img1](/assets/images/2024-09-23-custom-retention-policy/1.png)
-### **Use Tines Story Development**
+###### **Use Tines Story Development**
 Here’s how to complete the task using **Tines**:
 - **Create a Story in Tines**
 - **Actions in Tines:**
@@ -25,7 +25,7 @@ Here is a diagram of the required workflow:
 ![img1](/assets/images/2024-09-23-custom-retention-policy/2.png)
 
 ---
-### **Action 1: Fetch Index Size**
+##### **Action 1: Fetch Index Size**
 Create an HTTP Request Action in Tines to get the index size from Elasticsearch using the `_stats` API.
 **Reference**: [Elasticsearch: Indices Stats API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-stats.html)
 
@@ -33,7 +33,7 @@ Create an HTTP Request Action in Tines to get the index size from Elasticsearch 
 ![img1](/assets/images/2024-09-23-custom-retention-policy/4.png)
 ![img1](/assets/images/2024-09-23-custom-retention-policy/5.png)
 
-### **Action 2: Threshold Check**
+##### **Action 2: Threshold Check**
 Use a **Trigger Action** in Tines to compare the fetched size of the index to the threshold (e.g., 1 MB).
 
 ![img1](/assets/images/2024-09-23-custom-retention-policy/6.png)
@@ -42,7 +42,7 @@ Use a **Trigger Action** in Tines to compare the fetched size of the index to th
 
 If the threshold is exceeded, proceed to delete logs or take further action.
 
-### **Action 3: Send Email**
+##### **Action 3: Send Email**
 Create an **Email Action** in Tines to send an email report with the details of the index, size, and timestamp.
 
 ![img1](/assets/images/2024-09-23-custom-retention-policy/9.png)
@@ -56,7 +56,7 @@ You can open html editor and viewer by click the highlighted icon:
 ![img1](/assets/images/2024-09-23-custom-retention-policy/13.png)
 ![img1](/assets/images/2024-09-23-custom-retention-policy/14.png)
 
-### **Action 4: Delete Old Logs**
+##### **Action 4: Delete Old Logs**
 If the index size exceeds the threshold, you can use another **HTTP Request Action** in Tines to delete logs that are older than a certain number of days using the Elasticsearch `Delete By Query API`.
 **Reference**: [Elasticsearch: Delete By Query API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-delete-by-query.html)
 
@@ -70,7 +70,7 @@ This will delete all logs older than 7 days.
 
 ![img1](/assets/images/2024-09-23-custom-retention-policy/17.png)
 
-### **Full Workflow Structure:**
+##### **Full Workflow Structure:**
 Here is the workflow diagram for how the actions connect:
 
 ![img1](/assets/images/2024-09-23-custom-retention-policy/18.png)
@@ -85,7 +85,7 @@ Update workflow by adding "Pre-Deletion" and "Post-Deletion" `Send Email Action`
 
 
 ---
-### **Use Python Script**
+##### **Use Python Script**
 To implement this task using **Python**, we'll write a script that interacts with Elasticsearch via its API to:
 1. **Fetch the index size**.
 2. **Check if the size exceeds a threshold**.
@@ -199,7 +199,7 @@ if __name__ == "__main__":
 
 ```
 To send emails using **Gmail's SMTP server** in the Python script, you'll need to configure Gmail's SMTP settings and update the `SMTP_SERVER`, `SMTP_PORT`, and authentication variables in the script. Gmail uses **OAuth2** for secure authentication, but you can also use an **App Password** if you have **2-Step Verification** enabled for your Google account.
-### **Use an App Password**:
+##### **Use an App Password**:
 
 If your account uses **2-Step Verification**, you must create an **App Password**:
 

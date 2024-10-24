@@ -5,28 +5,28 @@ date: 2024-09-08
 thumbnail: /assets/images/2024-09-08-elastic-stack/thumb.png
 categories: [SOC Engineering, Setup, SIEM]
 ---
-# **Introduction**
+#### **Introduction**
 Elastic Stack, commonly known as the ELK Stack (Elasticsearch, Logstash, Kibana, and Beats), is a powerful suite of tools for searching, analyzing, and visualizing log and time-series data. The most commonly used combination today is Elasticsearch, Kibana, and Elastic Agent (which has replaced the need for Beats in many cases). These three components work together to provide scalable search, data indexing, and real-time insights. In this walkthrough, we will go through the steps involved in setting up Elasticsearch, Kibana, and Elastic Agent.
-# **Set Up Elasticsearch**
-### Add Server GPG key
+#### **Set Up Elasticsearch**
+##### Add Server GPG key
 ```
 curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch |sudo gpg --dearmor -o /usr/share/keyrings/elastic.gpg
 ```
-### Update sources lists
+##### Update sources lists
 ```
 echo "deb [signed-by=/usr/share/keyrings/elastic.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
 ```
-### Install Elasticsearch
+##### Install Elasticsearch
 ```
 sudo apt update
 sudo apt install elasticsearch
 ```
-## Configure Elasticsearch
+#### Configure Elasticsearch
 Elasticsearch’s configuration file is in `/etc/elasticsearch/elasticsearch.yml`
 To make Elasticsearch listens on all interfaces and bound IPs  uncomment `network.host` and replace its value with `localhost`
 
 ![](/assets/images/2024-09-08-elastic-stack/1.png)
-### Start and Run Elasticsearch
+##### Start and Run Elasticsearch
 Start the Elasticsearch service:
 ```
 sudo systemctl start elasticsearch
@@ -40,12 +40,12 @@ Check running by sending an HTTP request:
 curl -X GET "localhost:9200"
 ```
 ![Curl HTTP Request](/assets/images/2024-09-08-elastic-stack/curl-request.png)
-# Set Up Kibana
+#### Set Up Kibana
 We have already added the Elastic package source above so we can install using `apt`:
 ```
 sudo apt install kibana
 ```
-### Start and Run Kibana
+##### Start and Run Kibana
 Start the Kibana service:
 ```
 sudo systemctl start kibana
@@ -85,8 +85,8 @@ export ELASTIC_PASSWORD="your_auto_generated_password"
 ![Kibana Login Page Filled](/assets/images/2024-09-08-elastic-stack/login-filled.png)
 ![Welcome Page](/assets/images/2024-09-08-elastic-stack/welcome-elastic.png)
 ![Kibana Home Page](/assets/images/2024-09-08-elastic-stack/elastic-homepage.png)
-# **Set Up Elastic Agent**
-### Set Up Fleet Server
+#### **Set Up Elastic Agent**
+##### Set Up Fleet Server
 ![Fleet from Kibana](/assets/images/2024-09-08-elastic-stack/Kibana-fleet.png)
 ![Fleet Page](/assets/images/2024-09-08-elastic-stack/fleet-page.png)
 ![Add Fleet Server](/assets/images/2024-09-08-elastic-stack/add-fleet.png)
@@ -96,7 +96,7 @@ Name the fleet server and specify the host url with port 8220
 we can use the same host of elasticsearch
 ![Confirmation](/assets/images/2024-09-08-elastic-stack/wait-confirmation.png)
 ![Installed Fleet Server](/assets/images/2024-09-08-elastic-stack/installed-fleet.png)
-### Add Agents
+##### Add Agents
 I installed another virtual machine running ubuntu server to install elastic agent and retrieve logs from it.
 
 ---
