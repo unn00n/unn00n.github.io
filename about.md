@@ -76,8 +76,7 @@ Here are some of my notable projects and achievements:
   - Designed and implemented a SIEM system using Elastic Stack.
 - **[Threat Management Report](https://drive.google.com/file/d/1_XGPi4o4FlsU7E77WqBQ6Z2VNyfc2PS4/view?usp=sharing)**
   - Conducted a comprehensive threat management report.
-- **[OctoDig: Open-Source Subdomain Digger](https://github.com/unn00n/OctoDig)**
-  - Developed an open-source subdomain digger, OctoDig, to perform advanced subdomain enumeration on multiple domains with multiple tools. It allows for iterative exploration, gathering both first-level and deeper subdomains across specified levels.
+
 <div>
   <h1>$My_Info</h1>
 </div>
@@ -113,6 +112,8 @@ Here are some of my notable projects and achievements:
 <!--img class="no-interaction" src="https://img.shields.io/badge/-Assembly-808080?logo=assemblyscript&logoColor=white" alt="Assembly" /-->
 <img class="no-interaction" src="https://img.shields.io/badge/Bash-4EAA25?logo=gnubash&logoColor=fff" alt="Bash" />
 <img class="no-interaction" src="https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black" alt="Linux" />
+<img class="no-interaction" src="https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff" alt="Archlinux" />
+
 <img class="no-interaction" src="https://img.shields.io/badge/-Kali_Linux-557C94?logo=kalilinux&logoColor=black" alt="Kali Linux" />
 <img class="no-interaction" src="https://img.shields.io/badge/Powershell-0078D7?logo=windows&logoColor=white" alt="Powershell" />
 <img class="no-interaction" src="https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white" alt="Markdown" />
