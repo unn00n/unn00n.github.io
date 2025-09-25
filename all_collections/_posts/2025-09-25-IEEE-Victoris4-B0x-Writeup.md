@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "IEEE Victoris4 Finals - B0x Forensics Challenge"
+title: "IEEE Victoris 4.0 Finals - B0x Forensics Challenge"
 date: 2025-09-25 
 thumbnail: /assets/images/2025-09-25-B0x/2025-09-25-B0x.png
 categories: [CTF, IEEE, Victoris4, Forensics]
@@ -42,9 +42,9 @@ After checking through the contents, I eventually found the flag:
 
 ![2025-09-25181437.png](/assets/images/2025-09-25-B0x/2025-09-25181437.png)
 
-When I submitted it, the system rejected it because it didn’t match the competition’s required flag format. I then reviewed the **ceo info** file, which mentioned confidentiality, and remembered that the challenge stated sensitive data had been stolen. Taking this into account, I located the correct hex value, submitted it in the required format, and it was accepted:
+When I submitted it, the system rejected it because it didn’t match the competition’s required flag format. I then reviewed the **ceo info** file, which indicates something important about ceo and remembered that the challenge stated sensitive data had been stolen. Taking this into account, I noticed the hex value between the curly brackets in it, submitted it in the required format, and it was accepted:
 
 ![2025-09-25181551.png](/assets/images/2025-09-25-B0x/2025-09-25181551.png)
 
-Thanks to my team, we secured 3rd place in the IEEE Victoris4 CTF.
+Thanks to my team, we secured 3rd place in the IEEE Victoris 4.0 CTF.
 ![2025-09-257.15.27.jpeg](/assets/images/2025-09-25-B0x/2025-09-257.15.27.jpeg)
