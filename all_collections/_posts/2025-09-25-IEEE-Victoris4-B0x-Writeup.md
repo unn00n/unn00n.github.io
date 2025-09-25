@@ -22,7 +22,7 @@ find . -type f -printf '%T@ %p\n' | sort -nr | cut -d' ' -f2- > mod.txt
 
 I opened the `ActivitiesCache.db` file, which stores all user activities on Windows. Using **DB Browser for SQL**, I navigated through it to get a high-level view of the user’s activity.
 
-![image.psd(3).png](/assets/images/2025-09-25-B0x/image.psd\(3\).png)
+![image.psd(3).png](/assets/images/2025-09-25-B0x/image.psd(3).png)
 
 I also used **WxTCMD** from Eric Zimmerman’s tools, which can parse and translate the activity type column values:
 
