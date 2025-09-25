@@ -2,7 +2,7 @@
 layout: post
 title: "IEEE Victoris 4.0 Finals - B0x Forensics Challenge"
 date: 2025-09-25 
-thumbnail: /assets/images/2025-09-25-B0x/2025-09-25-B0x.png
+thumbnail: /assets/images/2025-09-25-B0x/2025-09-2500-24-23.png
 categories: [CTF, IEEE, Victoris4, Forensics]
 ---
 ![2025-09-25-B0x.png](/assets/images/2025-09-25-B0x/2025-09-25-B0x.png)
