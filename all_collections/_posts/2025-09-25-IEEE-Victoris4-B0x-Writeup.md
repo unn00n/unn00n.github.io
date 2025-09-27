@@ -105,7 +105,7 @@ I opened the image in FTK Imager and navigated the file system. The challenge de
 This challenge provided three web log files covering three consecutive days. I used ChatGPT to extract all POST requests from the logs and output them into a CSV for review. From that CSV I located the last web-shell and recovered the flag:
 ![](/assets/images/2025-09-25-B0x/2025-09-28010308.png)
 
-Those are all the forensics challenges from the final competition.
+Those were all the forensics challenges from the final competition. I hope these writeups prove useful.
 
 Thanks to my team, we secured 3rd place in the IEEE Victoris 4.0 CTF.
 ![2025-09-257.15.27.jpeg](/assets/images/2025-09-25-B0x/2025-09-257.15.27.jpeg)
