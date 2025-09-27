@@ -78,7 +78,7 @@ To understand what happened between the WinRAR installation and the `dllhost.exe
 
 The timeline showed WinRAR installation completion, execution of `dllhost.exe`, then MeshAgent activity, and finally a write of `winrar.dll` into the WinRAR installation folder. I extracted `winrar.dll`, inspected its strings, found an encoded candidate, decoded it with ROT13 in CyberChef, and recovered the flag:
 ![](/assets/images/2025-09-25-B0x/2025-09-25004100.png)
-![](/assets/images/2025-09-25-B0x/2025-09-27154220.png)
+
 ![](/assets/images/2025-09-25-B0x/2025-09-26004139.png)
 
 ---
