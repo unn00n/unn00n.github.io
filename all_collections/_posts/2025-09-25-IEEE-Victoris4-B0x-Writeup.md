@@ -67,7 +67,7 @@ Next, I exported files to list them by last modification timestamp:
 
 From this, I observed a WinRAR installation and an execution of `dllhost.exe` from the Public user’s Documents folder (an unusual location). I submitted the `dllhost.exe` file to VirusTotal and inspected its strings:
 ![2025-09-27214014.png](/assets/images/2025-09-25-B0x/2025-09-27214014.png)
-![2025-09-26004139.png](/assets/images/2025-09-25-B0x/2025-09-26004139.png)
+![2025-09-26004139.png](/assets/images/2025-09-25-B0x/2025-09-27214335.png)
 
 The binary appeared related to Mesh Agent (remote management), which suggested it might have been used when the challenge image was created rather than being part of the actual challenge activity. I paused work during the competition and continued later.
 
@@ -79,7 +79,7 @@ To understand what happened between the WinRAR installation and the `dllhost.exe
 The timeline showed WinRAR installation completion, execution of `dllhost.exe`, then MeshAgent activity, and finally a write of `winrar.dll` into the WinRAR installation folder. I extracted `winrar.dll`, inspected its strings, found an encoded candidate, decoded it with ROT13 in CyberChef, and recovered the flag:
 ![](/assets/images/2025-09-25-B0x/2025-09-25004100.png)
 ![](/assets/images/2025-09-25-B0x/2025-09-27154220.png)
-![](/assets/images/2025-09-25-B0x/2025-09-25003952.png)
+![](/assets/images/2025-09-25-B0x/2025-09-26004139.png)
 
 ---
 
