@@ -1,4 +1,4 @@
----
+<img width="1901" height="910" alt="2025-09-27214014" src="https://github.com/user-attachments/assets/cddb4ca5-592c-4ada-b88e-c3885e892c0e" />---
 layout: post
 title: "IEEE Victoris 4.0 Finals - B0x Forensics Challenge"
 date: 2025-09-25 
@@ -45,6 +45,67 @@ After checking through the contents, I eventually found the flag:
 When I submitted it, the system rejected it because it didn’t match the competition’s required flag format. I then reviewed the **ceo info** file, which indicates something important about ceo and remembered that the challenge stated sensitive data had been stolen. Taking this into account, I noticed the hex value between the curly brackets in it, submitted it in the required format, and it was accepted:
 
 ![2025-09-25181551.png](/assets/images/2025-09-25-B0x/2025-09-25181551.png)
+
+---
+
+### Illusion
+
+![2025-09-2500-49-07.png](/assets/images/2025-09-25-B0x/2025-09-2500-49-07.png)
+
+The challenge provided an `.ad1` image that, when opened in FTK Imager, showed the following:
+![2025-09-27154220.png](/assets/images/2025-09-25-B0x/2025-09-27154220.png)
+
+I started by examining `ActivitiesCache.db` and parsing prefetch files to get a high-level view of system activity:
+![2025-09-27193352.png](/assets/images/2025-09-25-B0x/2025-09-27193352.png)
+![2025-09-27192353.png](/assets/images/2025-09-25-B0x/2025-09-27192353.png)
+
+Prefetch timeline:
+![prefetch2025-09-27191638.png](/assets/images/2025-09-25-B0x/prefetch2025-09-27191638.png)
+
+Next, I exported files to list them by last modification timestamp:
+![2025-09-2716-28-52.png](/assets/images/2025-09-25-B0x/2025-09-2716-28-52.png)
+
+From this, I observed a WinRAR installation and an execution of `dllhost.exe` from the Public user’s Documents folder (an unusual location). I submitted the `dllhost.exe` file to VirusTotal and inspected its strings:
+![2025-09-27214014.png](/assets/images/2025-09-25-B0x/2025-09-27214014.png)
+![2025-09-26004139.png](/assets/images/2025-09-25-B0x/2025-09-26004139.png)
+
+The binary appeared related to Mesh Agent (remote management), which suggested it might have been used when the challenge image was created rather than being part of the actual challenge activity. I paused work during the competition and continued later.
+
+To understand what happened between the WinRAR installation and the `dllhost.exe` execution, I parsed the `$MFT` and focused on entries near that timeframe:
+![](/assets/images/2025-09-25-B0x/2025-09-28000717.png)
+![](/assets/images/2025-09-25-B0x/2025-09-28000810.png)
+![2025-09-280010536.png](/assets/images/2025-09-25-B0x/2025-09-280010536.png)
+
+The timeline showed WinRAR installation completion, execution of `dllhost.exe`, then MeshAgent activity, and finally a write of `winrar.dll` into the WinRAR installation folder. I extracted `winrar.dll`, inspected its strings, found an encoded candidate, decoded it with ROT13 in CyberChef, and recovered the flag:
+![](/assets/images/2025-09-25-B0x/2025-09-25004100.png)
+![](/assets/images/2025-09-25-B0x/2025-09-27154220.png)
+![](/assets/images/2025-09-25-B0x/2025-09-25003952.png)
+
+---
+
+### SilentByte
+
+![](/assets/images/2025-09-25-B0x/2025-09-2800-37-39.png)
+
+This challenge was straightforward. The image contained the following files:
+![](/assets/images/2025-09-25-B0x/2025-09-28004726.png)
+
+I opened the image in FTK Imager and navigated the file system. The challenge description mentioned patching applications; I confirmed Notepad++ was installed and discovered a `sysbackup` folder under `ProgramData`:
+![](/assets/images/2025-09-25-B0x/2025-09-28004821.png)
+
+`sysbackup` contained several notable binaries. I inspected strings until I found the flag in plaintext inside `system_patch.exe`:
+![](/assets/images/2025-09-25-B0x/2025-09-28004929.png)
+
+---
+
+### FindEvil
+
+![](/assets/images/2025-09-25-B0x/2025-09-2800-58-43.png)
+
+This challenge provided three web log files covering three consecutive days. I used ChatGPT to extract all POST requests from the logs and output them into a CSV for review. From that CSV I located the last web-shell and recovered the flag:
+![](/assets/images/2025-09-25-B0x/2025-09-28010308.png)
+
+Those are all the forensics challenges from the final competition.
 
 Thanks to my team, we secured 3rd place in the IEEE Victoris 4.0 CTF.
 ![2025-09-257.15.27.jpeg](/assets/images/2025-09-25-B0x/2025-09-257.15.27.jpeg)
