@@ -1,4 +1,4 @@
-<img width="1901" height="910" alt="2025-09-27214014" src="https://github.com/user-attachments/assets/cddb4ca5-592c-4ada-b88e-c3885e892c0e" />---
+---
 layout: post
 title: "IEEE Victoris 4.0 Finals - B0x Forensics Challenge"
 date: 2025-09-25 
